@@ -1,0 +1,42 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "network", "pulseaudio", "cpu", "memory"],
+    "hyprland/workspaces": {
+        "format": "{id}"
+    },
+    "hyprland/window": {
+        "format": "{class}",
+        "separate-outputs": true
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%r}",
+        "tooltip":true,
+        "tooltip-format":"{:%A %d/%m/%Y}"
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+    "network": {
+        "interval": 5,
+        "format": "󰖩 {essid} ({signalStrength}%)"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": [
+            "󰕿", "󰖀", "󰕾"
+        ]
+    },
+    "cpu": {
+        "interval": 5,
+        "format": "󰍛 {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "interval": 5,
+        "format": "󱤓 {percentage}%"
+    }
+}

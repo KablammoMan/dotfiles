@@ -1,0 +1,132 @@
+/* General Styling */
+* {
+    font-size: 15px;
+    font-family: "Noto Sans", "Material Design Icons";
+}
+
+#waybar {
+    background: transparent;
+    /* padding-top: 2em; */
+    /* background-color: rgb(25,25,25); */
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Each Main Section */
+#waybar > box > box > widget > * {
+    margin: 0.25em;
+    padding: 0.25em 1em;
+    background-color: rgb(10,10,10);
+    border-radius: 0.5em;
+}
+
+
+/* Hyprland Workspaces */
+#workspaces > button {
+    color: rgb(255,0,255);
+    transition: 0.2s;
+}
+
+#workspaces > button:hover {
+    background-color: rgb(90, 0, 90);
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: 0.2s;
+}
+
+#workspaces > button.active {
+    color: aqua;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: rgb(25,25,25);
+}
+
+#workspaces > button.active:hover {
+    background-color: rgb(0, 90, 90);
+    transition: 0.2s;
+}
+
+
+/* Hyprland Window */
+#window {
+    color: aqua;
+}
+
+/* Hide Window Title when No Windows */
+#waybar.empty > box > .modules-left > widget:nth-child(2) > * {
+    background-color: transparent;
+}
+
+
+/* Clock */
+#clock {
+    color: aqua;
+}
+
+
+/* Tray */
+#tray menu {
+    color: transparent;
+    background-color: transparent;
+}
+
+#tray > .needs-attention {
+    animation-name: needs-attention;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes needs-attention {
+    0% {
+        background-image: linear-gradient(
+            transparent,
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            transparent
+        );
+    }
+    50% {
+        background-image: none;
+    }
+    100% {
+        background-image: linear-gradient(
+            transparent,
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            rgb(183, 0, 0),
+            transparent
+        );
+    }
+}
+
+
+/* Network */
+#network {
+    color: aqua;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    color: rgb(255,0,255);
+}
+
+/* CPU */
+#cpu {
+    color: aqua;
+}
+
+
+/* Memory */
+#memory {
+    color: aqua;
+}
